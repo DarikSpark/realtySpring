@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="realtyCRMmysqlApp.bargain.detail.title">Bargain</span> {{bargain.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="realtyCRMmysqlApp.bargain.day_count">Day_count</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{bargain.day_count}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="realtyCRMmysqlApp.bargain.coming_date">Coming_date</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{bargain.coming_date | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="realtyCRMmysqlApp.bargain.note">Note</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{bargain.note}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="realtyCRMmysqlApp.bargain.client">client</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="client.detail({id:bargain.client.id})">{{bargain.client.name}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,34 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "bargain",
+            "otherEntityName": "bargain",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "client"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "passport",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "city",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151113222341",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

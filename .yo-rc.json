@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "realtyCRMmysql",
+    "packageName": "com.realtycrmmysql",
+    "packageFolder": "com/realtycrmmysql",
+    "authenticationType": "xauth",
+    "hibernateCache": "hazelcast",
+    "clusteredHttpSession": "hazelcast",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "1388ced956e6772a90e87203e5ae86961a62d0ec",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

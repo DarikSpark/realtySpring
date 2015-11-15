@@ -1,0 +1,24 @@
+{
+    "realtyCRMmysqlApp": {
+        "bargain" : {
+            "home": {
+                "title": "Bargains",
+                "createLabel": "Create a new Bargain",
+                "createOrEditLabel": "Create or edit a Bargain"
+            },
+            "created": "A new Bargain is created with identifier {{ param }}",
+            "updated": "A Bargain is updated with identifier {{ param }}",
+            "deleted": "A Bargain is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bargain {{ id }}?"
+            },
+            "detail": {
+                "title": "Bargain"
+            },
+            "day_count": "Day_count",
+            "coming_date": "Coming_date",
+            "note": "Note",
+            "client": "Client"
+        }
+    }
+}

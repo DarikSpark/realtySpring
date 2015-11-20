@@ -12,7 +12,7 @@
             "relationshipName": "comment",
             "otherEntityName": "comment",
             "relationshipType": "one-to-many",
-            "otherEntityField": "id"
+            "otherEntityRelationshipName": "client"
         }
     ],
     "fields": [

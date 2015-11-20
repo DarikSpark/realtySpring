@@ -1,0 +1,36 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "flat",
+            "otherEntityName": "flat",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "owner"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "1"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "bank_account",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151119214416",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

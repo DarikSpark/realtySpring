@@ -18,7 +18,8 @@
             "name": "Name",
             "passport": "Passport",
             "city": "City",
-            "bargain": "Bargain"
+            "bargain": "Bargain",
+            "comment": "Comment"
         }
     }
 }

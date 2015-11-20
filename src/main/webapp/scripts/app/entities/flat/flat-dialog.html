@@ -1,0 +1,76 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myFlatLabel" translate="realtyCRMmysqlApp.flat.home.createOrEditLabel">Create or edit a Flat</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="flat.id" readonly />
+        </div>
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.flat.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="flat.address"
+                    required ng-minlength="1" />
+            <div ng-show="editForm.address.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.address.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.flat.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="flat.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.flat.day_cost" for="field_day_cost">Day_cost</label>
+            <input type="number" class="form-control" name="day_cost" id="field_day_cost"
+                    ng-model="flat.day_cost"
+                     />
+        </div>
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.flat.people_count" for="field_people_count">People_count</label>
+            <input type="number" class="form-control" name="people_count" id="field_people_count"
+                    ng-model="flat.people_count"
+                    min="1" />
+            <div ng-show="editForm.people_count.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.people_count.$error.min" translate="entity.validation.min" translate-value-min="1">
+                    This field should be more than 1.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.people_count.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.flat.owner" for="field_owner">owner</label>
+            <select class="form-control" id="field_owner" name="owner" ng-model="flat.owner" ng-options="owner as owner.name for owner in owners track by owner.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

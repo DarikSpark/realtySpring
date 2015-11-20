@@ -6,6 +6,13 @@
             "otherEntityName": "bargain",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "client"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "comment",
+            "otherEntityName": "comment",
+            "relationshipType": "one-to-many",
+            "otherEntityField": "id"
         }
     ],
     "fields": [
@@ -28,7 +35,7 @@
             "fieldType": "String"
         }
     ],
-    "changelogDate": "20151113222341",
+    "changelogDate": "20151120222341",
     "dto": "no",
     "pagination": "infinite-scroll"
 }

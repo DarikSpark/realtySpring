@@ -1,0 +1,28 @@
+{
+    "realtyCRMmysqlApp": {
+        "flat" : {
+            "home": {
+                "title": "Flats",
+                "createLabel": "Créer un nouveau Flat",
+                "createOrEditLabel": "Créer ou éditer un Flat"
+            },
+            "created": "Un nouveau Flat a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Flat avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Flat avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Flat {{ id }} ?"
+            },
+            "detail": {
+                "title": "Flat"
+            },
+            "address": "Address",
+            "description": "Description",
+            "day_cost": "Day_cost",
+            "people_count": "People_count",
+            "owner": "Owner",
+            "comment": "Comment",
+            "bargain": "Bargain"
+        }
+    }
+}
+

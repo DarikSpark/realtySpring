@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('realtyCRMmysqlApp')
-    .controller('ClientDetailController', function ($scope, $rootScope, $stateParams, entity, Client, Bargain) {
+    .controller('ClientDetailController', function ($scope, $rootScope, $stateParams, entity, Client, Bargain, Comment) {
         $scope.client = entity;
         $scope.load = function (id) {
             Client.get({id: id}, function(result) {

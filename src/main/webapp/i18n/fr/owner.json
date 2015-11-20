@@ -1,0 +1,25 @@
+{
+    "realtyCRMmysqlApp": {
+        "owner" : {
+            "home": {
+                "title": "Owners",
+                "createLabel": "Créer un nouveau Owner",
+                "createOrEditLabel": "Créer ou éditer un Owner"
+            },
+            "created": "Un nouveau Owner a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Owner avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Owner avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Owner {{ id }} ?"
+            },
+            "detail": {
+                "title": "Owner"
+            },
+            "name": "Name",
+            "phone": "Phone",
+            "bank_account": "Bank_account",
+            "flat": "Flat"
+        }
+    }
+}
+

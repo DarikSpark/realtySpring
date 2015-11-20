@@ -8,6 +8,9 @@
                 "main": "Entités",
                 "client": "Client",
                 "bargain": "Bargain",
+                "owner": "Owner",
+                "flat": "Flat",
+                "comment": "Comment",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

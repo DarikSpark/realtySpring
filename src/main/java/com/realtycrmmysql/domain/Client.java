@@ -38,6 +38,11 @@ public class Client implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Bargain> bargains = new HashSet<>();
 
+    @OneToMany(mappedBy = "client")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Comment> comments = new HashSet<>();
+
     public Long getId() {
         return id;
     }
@@ -76,6 +81,14 @@ public class Client implements Serializable {
 
     public void setBargains(Set<Bargain> bargains) {
         this.bargains = bargains;
+    }
+
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
     }
 
     @Override

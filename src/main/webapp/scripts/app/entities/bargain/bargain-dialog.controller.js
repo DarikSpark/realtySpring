@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('realtyCRMmysqlApp').controller('BargainDialogController',
-    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Bargain', 'Client',
-        function($scope, $stateParams, $modalInstance, entity, Bargain, Client) {
+    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Bargain', 'Client', 'Flat',
+        function($scope, $stateParams, $modalInstance, entity, Bargain, Client, Flat) {
 
         $scope.bargain = entity;
         $scope.clients = Client.query();
+        $scope.flats = Flat.query();
         $scope.load = function(id) {
             Bargain.get({id : id}, function(result) {
                 $scope.bargain = result;

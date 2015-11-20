@@ -1,0 +1,66 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myBargainLabel" translate="realtyCRMmysqlApp.bargain.home.createOrEditLabel">Create or edit a Bargain</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="bargain.id" readonly />
+        </div>
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.bargain.day_count" for="field_day_count">Day_count</label>
+            <input type="number" class="form-control" name="day_count" id="field_day_count"
+                    ng-model="bargain.day_count"
+                    min="0" />
+            <div ng-show="editForm.day_count.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.day_count.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.day_count.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.bargain.coming_date" for="field_coming_date">Coming_date</label>
+            <input type="date" class="form-control" name="coming_date" id="field_coming_date"
+                    ng-model="bargain.coming_date"
+                    required />
+            <div ng-show="editForm.coming_date.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.coming_date.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.bargain.note" for="field_note">Note</label>
+            <input type="text" class="form-control" name="note" id="field_note"
+                    ng-model="bargain.note"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="realtyCRMmysqlApp.bargain.client" for="field_client">client</label>
+            <select class="form-control" id="field_client" name="client" ng-model="bargain.client" ng-options="client as client.name for client in clients track by client.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

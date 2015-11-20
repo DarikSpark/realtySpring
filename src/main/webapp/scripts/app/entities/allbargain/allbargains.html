@@ -1,0 +1,56 @@
+<div>
+    <h2 translate="realtyCRMmysqlApp.bargain.home.title">All Bargains</h2>
+    <jh-alert></jh-alert>
+<!--     <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="bargain.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="realtyCRMmysqlApp.bargain.home.createLabel">Create a new Bargain</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="realtyCRMmysqlApp.bargain.day_count">Day_count</th>
+                    <th translate="realtyCRMmysqlApp.bargain.coming_date">Coming_date</th>
+                    <th translate="realtyCRMmysqlApp.bargain.note">Note</th>
+                    <th translate="realtyCRMmysqlApp.bargain.client">client</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="bargain in bargains track by bargain.id">
+                    <td><a ui-sref="bargain.detail({id:bargain.id})">{{bargain.id}}</a></td>
+                    <td>{{bargain.day_count}}</td>
+                        <td>{{bargain.coming_date | date:'mediumDate'}}</td>
+                    <td>{{bargain.note}}</td>
+                    <td>
+                        <a ui-sref="client.detail({id:bargain.client.id})">{{bargain.client.name}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="bargain.detail({id:bargain.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="bargain.edit({id:bargain.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="bargain.delete({id:bargain.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

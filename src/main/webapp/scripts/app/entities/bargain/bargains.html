@@ -20,6 +20,7 @@
                     <th translate="realtyCRMmysqlApp.bargain.coming_date">Coming_date</th>
                     <th translate="realtyCRMmysqlApp.bargain.note">Note</th>
                     <th translate="realtyCRMmysqlApp.bargain.client">client</th>
+                    <th translate="realtyCRMmysqlApp.bargain.flat">flat</th>
                     <th></th>
                 </tr>
             </thead>
@@ -31,6 +32,9 @@
                     <td>{{bargain.note}}</td>
                     <td>
                         <a ui-sref="client.detail({id:bargain.client.id})">{{bargain.client.name}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="flat.detail({id:bargain.flat.id})">{{bargain.flat.address}}</a>
                     </td>
                     <td>
                         <button type="submit"

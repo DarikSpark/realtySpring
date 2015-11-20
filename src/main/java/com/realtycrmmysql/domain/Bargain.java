@@ -37,6 +37,9 @@ public class Bargain implements Serializable {
     @ManyToOne
     private Client client;
 
+    @ManyToOne
+    private Flat flat;
+
     public Long getId() {
         return id;
     }
@@ -75,6 +78,14 @@ public class Bargain implements Serializable {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public Flat getFlat() {
+        return flat;
+    }
+
+    public void setFlat(Flat flat) {
+        this.flat = flat;
     }
 
     @Override

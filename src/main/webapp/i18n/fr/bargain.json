@@ -18,7 +18,8 @@
             "day_count": "Day_count",
             "coming_date": "Coming_date",
             "note": "Note",
-            "client": "Client"
+            "client": "Client",
+            "flat": "Flat"
         }
     }
 }

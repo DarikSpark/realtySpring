@@ -1,0 +1,52 @@
+<div>
+    <h2 translate="realtyCRMmysqlApp.owner.home.title">Owners</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="owner.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="realtyCRMmysqlApp.owner.home.createLabel">Create a new Owner</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="realtyCRMmysqlApp.owner.name">Name</th>
+                    <th translate="realtyCRMmysqlApp.owner.phone">Phone</th>
+                    <th translate="realtyCRMmysqlApp.owner.bank_account">Bank_account</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="owner in owners track by owner.id">
+                    <td><a ui-sref="owner.detail({id:owner.id})">{{owner.id}}</a></td>
+                    <td>{{owner.name}}</td>
+                    <td>{{owner.phone}}</td>
+                    <td>{{owner.bank_account}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="owner.detail({id:owner.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="owner.edit({id:owner.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="owner.delete({id:owner.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
